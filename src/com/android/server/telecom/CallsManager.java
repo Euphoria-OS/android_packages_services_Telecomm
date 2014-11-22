@@ -229,6 +229,8 @@ public final class CallsManager extends Call.ListenerBase {
                 // call notifier and the call logger manually.
                 mMissedCallNotifier.showMissedCallNotification(incomingCall);
                 mCallLogManager.logCall(incomingCall, Calls.MISSED_TYPE);
+            } else {
+                addCall(incomingCall);
             }
         }
     }
